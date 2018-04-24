@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="utf8">
+<title>AngularJS Demo</title>
+<script src="lib/angular.min.js"></script>
+<script src="angularDemo.js"></script>
+</head>
+<body>
+<h1>Ivo test</h1>
+<div ng-controller="DemoController">
+Welcome {{message}}
+5+5 = {{5+5}}
+</div>
+<div>
+Welcome {{'Angular'+'JS'}}
+Welcome {{message}}
+	<label for="range-1">Slider:</label>
+	<input name="range-1" id="range-1" data-highlight="true" min="0" max="100" value="40" type="range"/>
+</div>
+<div ng-controller="PhoneListController">
+Welcome {{message}}
+ <ul>
+    <li ng-repeat="phone in phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>
+
+<div ng-controller="DemoCtrl">
+ <h1>Name:</h1> <input type="text" ng-model="newNames"/>
+<button ng-click="add()"> Add</button>
+	
+	<ul>
+		<li ng-repeat="contact in names">{{contact}}</li>
+	</ul>
+</div>
+</body>
+</html>
